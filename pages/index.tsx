@@ -15,6 +15,7 @@ export default function Home() {
         <h1 className={styles.title}>
           <a href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html">絢瀬絵里</a>を推せ！！！！！！！！！！
         </h1>
+        <h3>南條愛乃さんも推しましょう。約束。</h3>
 
       </main>
 
