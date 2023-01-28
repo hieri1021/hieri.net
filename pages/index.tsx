@@ -1,8 +1,34 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useState } from 'react';
 
 export default function Home() {
+
+  function twoDigit(num: number) {
+    let ret;
+    if( num < 10 ) 
+      ret = "0" + num; 
+    else 
+      ret = num; 
+    return ret;
+  }
+
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let date = today.getDate();
+  const [hours, setHour] = useState(today.getHours());
+  const [minutes, setMin] = useState(today.getMinutes());
+  const [seconds, setSec] = useState(today.getSeconds());
+  //let msg = year + "年" + month + "月" + date + "日" + hours + "時" + minutes + "分" + seconds + "秒";
+  setInterval(() => {
+    const now = new Date();
+    setHour(now.getHours());
+    setMin(now.getMinutes());
+    setSec(now.getSeconds());
+  }, 1000);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +42,7 @@ export default function Home() {
           <a href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html">絢瀬絵里</a>を推せ！！！！！！！！！！
         </h1>
         <h3>南條愛乃さんも推しましょう。約束。</h3>
+        <h2 id="RealtimeClockArea" suppressHydrationWarning={true}>{year}年{month}月{date}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒</h2>
 
       </main>
 
