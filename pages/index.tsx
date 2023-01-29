@@ -5,6 +5,7 @@ import { useState } from 'react';
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 export default function Home() {
 
@@ -45,7 +46,7 @@ export default function Home() {
         <h1>hieri.jp</h1>
         <div className={styles.main}>
           <h1 style={{textAlign: "center"}}>
-            <a style={{color: "blue"}} href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer">絢瀬絵里</a>
+            <a style={{color: "skyblue"}} href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer">絢瀬絵里</a>
             を推せ！！！！！！！！！！
           </h1>
           <h4 style={{textAlign: "center"}}>南條愛乃さんも推しましょう。約束。</h4>
@@ -60,9 +61,10 @@ export default function Home() {
       </p>
 
       <hr />
-      <p style={{textAlign: "center"}}><FontAwesomeIcon icon={faGithub} width={18} height={18} transform="down-1" /> Github:<a style={{color: "blue"}} href="https://Github.com/hieri1021/myfavorite" target="_blank" rel="noopener noreferrer">hieri1021/myfaovrite</a></p>
+      <p style={{textAlign: "center"}}>
+        <FontAwesomeIcon icon={faGithub} width={18} height={18} transform="down-1" /> Github:<a style={{color: "blue"}} href="https://Github.com/hieri1021/myfavorite" target="_blank" rel="noopener noreferrer">hieri1021/myfaovrite</a> / <FontAwesomeIcon icon={faTwitter} width={18} height={18} transform="down-1" /> Twitter:<a style={{color: "blue"}} href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer">@yamahi_5028</a>
+      </p>
       </main>
-    </div >
-    
+    </div >    
   )
 }
