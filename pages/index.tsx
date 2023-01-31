@@ -43,7 +43,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>hieri.jp</h1>
+        <h1>ヒエリのサイト</h1>
         <div className={styles.main}>
           <h1 style={{textAlign: "center"}}>
             <a style={{color: "skyblue"}} href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer">絢瀬絵里</a>
