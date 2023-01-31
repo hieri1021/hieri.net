@@ -37,9 +37,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>kke-phi</title>
+        <title>hieri.jp</title>
         <meta name="description" content="サイトもどき" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/lamune.ico" />
       </Head>
 
       <main>
