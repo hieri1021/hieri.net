@@ -51,6 +51,12 @@ export default function Home() {
           </h1>
           <h4 style={{textAlign: "center"}}>南條愛乃さんも推しましょう。約束。</h4>
         </div>
+
+        <div className="mt-2">
+          <img src="https://count.getloli.com/get/@hieri?theme=asoul"
+             alt="表示カウンター(count.getloli.com)"
+             loading='lazy' />
+        </div>
       
 
       <p 
