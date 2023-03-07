@@ -26,7 +26,7 @@ export default function Home() {
   const [minutes, setMin] = useState(today.getMinutes());
   const [seconds, setSec] = useState(today.getSeconds());
   //let msg = year + "年" + month + "月" + date + "日" + hours + "時" + minutes + "分" + seconds + "秒";
-  
+
   setInterval(() => {
     const now = new Date();
     setHour(now.getHours());
@@ -53,11 +53,10 @@ export default function Home() {
         </div>
 
         <div className="mt-2">
-          <img src="https://count.getloli.com/get/@hieri?theme=asoul"
+          <img src="https://moe-counter.yude.jp/get/@hieri?theme=asoul"
              alt="表示カウンター(count.getloli.com)"
              loading='lazy' />
-        </div>
-      
+        </div>      
 
       <p 
       id="RealtimeClockArea" suppressHydrationWarning={true}
