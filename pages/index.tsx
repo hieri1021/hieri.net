@@ -1,11 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+library.add(faGithub as IconDefinition);
+library.add(faTwitter as IconDefinition);
 
 export default function Home() {
 
@@ -67,7 +70,7 @@ export default function Home() {
 
       <hr />
       <p style={{textAlign: "center"}}>
-        <FontAwesomeIcon icon={faGithub} width={18} height={18} transform="down-1" /> Github:<a style={{color: "blue"}} href="https://Github.com/hieri1021/myfavorite" target="_blank" rel="noopener noreferrer">hieri1021/myfaovrite</a> / <FontAwesomeIcon icon={faTwitter} width={18} height={18} transform="down-1" /> Twitter:<a style={{color: "blue"}} href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer">@yamahi_5028</a>
+        <FontAwesomeIcon icon={faGithub as IconDefinition} width={18} height={18} transform="down-1" /> Github:<a style={{color: "blue"}} href="https://Github.com/hieri1021/myfavorite" target="_blank" rel="noopener noreferrer">hieri1021/myfaovrite</a> / <FontAwesomeIcon icon={faTwitter as IconDefinition} width={18} height={18} transform="down-1" /> Twitter:<a style={{color: "blue"}} href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer">@yamahi_5028</a>
       </p>
       </main>
     </div >    
