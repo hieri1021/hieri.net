@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import puppeteer from "puppeteer";
 library.add(faGithub as IconDefinition);
 library.add(faTwitter as IconDefinition);
 
@@ -38,21 +37,6 @@ export default function Home() {
     setSec(now.getSeconds());
   }, 1000);
 
-  /*const main = async () => {
-    const browser = await puppeteer.launch()
-    const page = await browser.newPage()
-    await page.goto("https://zenn.dev")
-  
-    // トップページの記事タイトルを列挙する
-    const titles = await page.$$eval('h2', list => list.map(e => e.textContent))
-    console.log(titles)
-  
-    // トップページのスクショを残す
-    await page.screenshot({ path: "C:/typescript/zenntop.png" });
-  
-    await browser.close()
-  }*/
-
   return (
     <div className={styles.container}>
       <Head>
@@ -69,6 +53,11 @@ export default function Home() {
             を推せ！！！！！！！！！！
           </h1>
           <h4 style={{textAlign: "center"}}>南條愛乃さんも推しましょう。約束。</h4>
+          <h1 style={{textAlign: "center"}}>
+            南條さんが
+            <a style={{color: "skyblue"}} href="https://www.dlsite.com/home/work/=/product_id/RJ01080844.html" target="_blank" rel="noopener noreferrer">ASMR作品</a>
+            を出してくださったぞ！！全人類聞け！！！！
+          </h1>
         </div>
 
         <div className="mt-2">
@@ -86,7 +75,7 @@ export default function Home() {
 
       <hr />
       <p style={{textAlign: "center"}}>
-        <FontAwesomeIcon icon={faGithub as IconDefinition} width={18} height={18} transform="down-1" /> Github:<a style={{color: "blue"}} href="https://Github.com/hieri1021/myfavorite" target="_blank" rel="noopener noreferrer">hieri1021/myfaovrite</a> / <FontAwesomeIcon icon={faTwitter as IconDefinition} width={18} height={18} transform="down-1" /> Twitter:<a style={{color: "blue"}} href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer">@yamahi_5028</a>
+        <FontAwesomeIcon icon={faGithub as IconDefinition} width={18} height={18} transform="down-1" /> Github:<a style={{color: "blue"}} href="https://Github.com/hieri1021/hieri_website" target="_blank" rel="noopener noreferrer">hieri1021/hieri_website</a> / <FontAwesomeIcon icon={faTwitter as IconDefinition} width={18} height={18} transform="down-1" /> Twitter:<a style={{color: "blue"}} href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer">@yamahi_5028</a>
       </p>
       </main>
     </div >    
