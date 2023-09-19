@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>hieri.jp</title>
+        <title>hieri.app</title>
         <meta name="description" content="サイトもどき" />
         <link rel="icon" href="/lamune.ico" />
       </Head>
