@@ -61,7 +61,7 @@ export default function Home() {
         </div>
 
         <div className="mt-2">
-          <img src="https://moe-counter.yude.jp/get/@hieri?theme=asoul"
+          <img src="https://moe-counter-cf.yude.workers.dev/hieri"
              alt="表示カウンター(count.getloli.com)"
              loading='lazy' />
         </div>      
