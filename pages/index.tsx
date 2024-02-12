@@ -63,8 +63,10 @@ export default function Home() {
         <div className="mt-2">
           <img src="https://moe-counter-cf.yude.workers.dev/hieri"
              alt="表示カウンター(count.getloli.com)"
-             loading='lazy' />
-        </div>      
+             loading='lazy' width="315" height="100"/>
+        </div>
+
+        <img alt="site_banner" src="Site_banner.png" width="234" height="60" />
 
       <p 
       id="RealtimeClockArea" suppressHydrationWarning={true}
