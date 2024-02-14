@@ -130,7 +130,7 @@ dist
 .pnp.*
 
 # node_modules
-node_modules
+node_modules/
 
 # public
-public
+public/
