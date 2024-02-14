@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>hieri.jp</title>
+        <title>hieri.app</title>
         <meta name="description" content="サイトもどき" />
         <link rel="icon" href="/lamune.ico" />
       </Head>
@@ -49,10 +49,15 @@ export default function Home() {
         <h1>ヒエリのサイト</h1>
         <div className={styles.main}>
           <h1 style={{textAlign: "center"}}>
-            <a style={{color: "skyblue"}} href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer">絢瀬絵里</a>
+            <a href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer">絢瀬絵里</a>
             を推せ！！！！！！！！！！
           </h1>
           <h4 style={{textAlign: "center"}}>南條愛乃さんも推しましょう。約束。</h4>
+          <h1 style={{textAlign: "center"}}>
+            南條さんが
+            <a href="https://www.dlsite.com/home/work/=/product_id/RJ01080844.html" target="_blank" rel="noopener noreferrer">ASMR作品</a>
+            を出してくださったぞ！！全人類聞け！！！！
+          </h1>
         </div>
 
         <div className="mt-2">
@@ -70,7 +75,7 @@ export default function Home() {
 
       <hr />
       <p style={{textAlign: "center"}}>
-        <FontAwesomeIcon icon={faGithub as IconDefinition} width={18} height={18} transform="down-1" /> Github:<a style={{color: "blue"}} href="https://Github.com/hieri1021/myfavorite" target="_blank" rel="noopener noreferrer">hieri1021/myfaovrite</a> / <FontAwesomeIcon icon={faTwitter as IconDefinition} width={18} height={18} transform="down-1" /> Twitter:<a style={{color: "blue"}} href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer">@yamahi_5028</a>
+        <FontAwesomeIcon icon={faGithub as IconDefinition} width={18} height={18} transform="down-1" /> Github:<a href="https://Github.com/hieri1021/hieri_website" target="_blank" rel="noopener noreferrer">hieri1021/hieri_website</a>. / <FontAwesomeIcon icon={faTwitter as IconDefinition} width={18} height={18} transform="down-1" /> Twitter:<a href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer">@yamahi_5028</a>
       </p>
       </main>
     </div >    
