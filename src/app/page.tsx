@@ -42,7 +42,7 @@ export default function Home() {
       <Head>
         <title>hieri.net</title>
         <meta name="description" content="サイトもどき" />
-        <link rel="icon" href="/lamune.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="container mx-auto">
@@ -50,7 +50,7 @@ export default function Home() {
 
         <div className="text-5xl mt-10 mb-10">
           <h1 className="text-center">
-            <a href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer" className="underline">絢瀬絵里</a>
+            <a href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer" className="underline decoration-blue-300">絢瀬絵里</a>
             を推せ！！！！！！！！！！
           </h1>
           <h4 className="text-center">南條愛乃さんも推しましょう。約束。</h4>
