@@ -61,7 +61,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-end">
-          <div className='grid justify-items-center'>
+          <div className='grid justify-items-satrt'>
             <img src="https://spotify-recently-played-readme.vercel.app/api?user=31upypeuqy2n3urisvkknr7gh2ra"
               alt="recently spotify"
               loading='lazy'
@@ -78,13 +78,16 @@ export default function Home() {
         
         <p 
         id="RealtimeClockArea" suppressHydrationWarning={true}
-        className="text-right text-xl"
+        className="text-right text-xl mt-5"
         >
           {year}年{month}月{date}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒
         </p>
 
-        <hr className='mt-5' />
-        <img alt="hieribanner" src="./hieri.webp" className='h-12 inline' />
+        <hr/>
+        <div className='text-center'>
+          <img alt="hieribanner" src="./hieri.webp" className='h-12 inline' />
+          <img alt="happybanner" src="./busy_banner.webp" className='h-12 inline' />
+        </div>
         <p className='text-center text-xl'>
           <FontAwesomeIcon icon={faGithub as IconDefinition} width={18} height={18} transform="down-1" /> Github : <a href="https://Github.com/hieri1021/hieri.net" target="_blank" rel="noopener noreferrer" className='underline decoration-blue-300'>hieri1021/hieri.net</a> / <FontAwesomeIcon icon={faTwitter as IconDefinition} width={18} height={18} transform="down-1" /> Twitter : <a href="https://twitter.com/yamahi_5028" target="_blank" rel="noopener noreferrer" className='underline decoration-blue-300'>@yamahi_5028</a> / Scrapbox : <a href="https://scrapbox.io/hieri-scrapbox" target="_blank" rel="noopener noreferrer" className='underline decoration-blue-300'>hieri-scrapbox</a>
         </p>
