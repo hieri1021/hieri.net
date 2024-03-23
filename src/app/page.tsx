@@ -85,7 +85,7 @@ export default function Home() {
 
         <hr/>
         <div className='text-center'>
-          <img alt="hieribanner" src="./hieri.webp" className='h-12 inline' />
+          <img alt="hieribanner" src="./hieribanner.webp" className='h-12 inline' />
           <img alt="happybanner" src="./busy_banner.webp" className='h-12 inline' />
         </div>
         <p className='text-center text-xl'>
