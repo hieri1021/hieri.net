@@ -1,6 +1,6 @@
-"use client"
-
 import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -45,30 +45,30 @@ export default function Home() {
         <link rel="icon" href="/lamune.ico" />
       </Head>
 
-      <main className="container mx-auto">
-        <h1 className="text-4xl mt-3">ヒエリのサイト</h1>
-
-        <div className="text-5xl mt-10 mb-10">
-          <h1 className="text-center">
-            <a href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer" className="underline">絢瀬絵里</a>
+      <main>
+        <h1>ヒエリのサイト</h1>
+        <p className="text-xl">aaaa</p>
+        <div className={styles.main}>
+          <h1 style={{textAlign: "center"}}>
+            <a href="https://www.lovelive-anime.jp/otonokizaka/member/member02.html" target="_blank" rel="noopener noreferrer">絢瀬絵里</a>
             を推せ！！！！！！！！！！
           </h1>
-          <h4 className="text-center">南條愛乃さんも推しましょう。約束。</h4>
-          <h1 className="text-right">
+          <h4 style={{textAlign: "center"}}>南條愛乃さんも推しましょう。約束。</h4>
+          <h1 className="underline" style={{textAlign: "center"}}>
             南條さんが
             <a href="https://www.dlsite.com/home/work/=/product_id/RJ01080844.html" target="_blank" rel="noopener noreferrer">ASMR作品</a>
             を出してくださったぞ！！全人類聞け！！！！
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div>
+        <div id="container">
+          <div id="counter">
             <img src="https://moe-counter-cf.yude.workers.dev/hieri"
               alt="表示カウンター"
               loading='lazy' />
           </div>      
 
-          <div>
+          <div id="soptify">
             <img src="https://spotify-recently-played-readme.vercel.app/api?user=31upypeuqy2n3urisvkknr7gh2ra"
               alt="recently spotify"
               loading='lazy' />
@@ -77,7 +77,7 @@ export default function Home() {
         
         <p 
         id="RealtimeClockArea" suppressHydrationWarning={true}
-        className="text-right"
+        style={{textAlign: "right"}}
         >
           {year}年{month}月{date}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒
         </p>
