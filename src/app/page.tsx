@@ -22,9 +22,9 @@ export default function Home() {
   }
 
   let today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  let date = today.getDate();
+  const [years, setYear] = useState(today.getFullYear());
+  const [months, setMonth] = useState(today.getMonth()+1);
+  const [dates, setDate] = useState(today.getDate());
   const [hours, setHour] = useState(today.getHours());
   const [minutes, setMin] = useState(today.getMinutes());
   const [seconds, setSec] = useState(today.getSeconds());
@@ -32,9 +32,12 @@ export default function Home() {
 
   setInterval(() => {
     const now = new Date();
-    setHour(now.getHours());
-    setMin(now.getMinutes());
-    setSec(now.getSeconds());
+    setYear((n) => now.getFullYear());
+    setMonth((n) => now.getMonth()+1);
+    setDate((n) => now.getDate())
+    setHour((n) => now.getHours());
+    setMin((n) => now.getMinutes());
+    setSec((n) => now.getSeconds());
   }, 1000);
 
   return (
@@ -80,7 +83,7 @@ export default function Home() {
         id="RealtimeClockArea" suppressHydrationWarning={true}
         className="text-right text-xl mt-5"
         >
-          {year}年{month}月{date}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒
+          {years}年{months}月{dates}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒
         </p>
 
         <hr/>
