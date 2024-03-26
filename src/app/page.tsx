@@ -21,24 +21,40 @@ export default function Home() {
     return ret;
   }
 
-  let today = new Date();
+  function threeDigit(num: number) {
+    let ret;
+    if(num < 10) 
+      ret = "00" + num; 
+    
+    else if(num < 100 && num >= 10)
+      ret = "0" + num; 
+  
+    else
+      ret = num;
+
+    return ret;
+  }
+
+  const today = new Date();
   const [years, setYear] = useState(today.getFullYear());
   const [months, setMonth] = useState(today.getMonth()+1);
   const [dates, setDate] = useState(today.getDate());
   const [hours, setHour] = useState(today.getHours());
   const [minutes, setMin] = useState(today.getMinutes());
   const [seconds, setSec] = useState(today.getSeconds());
+  const [milliseconds, setmilliSec] = useState(today.getMilliseconds());
   //let msg = year + "年" + month + "月" + date + "日" + hours + "時" + minutes + "分" + seconds + "秒";
 
   setInterval(() => {
-    const now = new Date();
-    setYear((n) => now.getFullYear());
-    setMonth((n) => now.getMonth()+1);
-    setDate((n) => now.getDate())
-    setHour((n) => now.getHours());
-    setMin((n) => now.getMinutes());
-    setSec((n) => now.getSeconds());
-  }, 1000);
+    let now = new Date();
+    setYear((nye) => now.getFullYear());
+    setMonth((nmo) => now.getMonth()+1);
+    setDate((nda) => now.getDate());
+    setHour((nho) => now.getHours());
+    setMin((nmi) => now.getMinutes());
+    setSec((nse) => now.getSeconds());
+    setmilliSec((nmse) => now.getMilliseconds());
+  }, 10);
 
   return (
     <div>
@@ -83,7 +99,7 @@ export default function Home() {
         id="RealtimeClockArea" suppressHydrationWarning={true}
         className="text-right text-xl mt-5"
         >
-          {years}年{months}月{dates}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒
+          {years}年{months}月{dates}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒{threeDigit(milliseconds)}ミリ秒
         </p>
 
         <hr/>
