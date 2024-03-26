@@ -12,50 +12,6 @@ library.add(faTwitter as IconDefinition);
 
 export default function Home() {
 
-  function twoDigit(num: number) {
-    let ret;
-    if( num < 10 ) 
-      ret = "0" + num; 
-    else 
-      ret = num; 
-    return ret;
-  }
-
-  function threeDigit(num: number) {
-    let ret;
-    if(num < 10) 
-      ret = "00" + num; 
-    
-    else if(num < 100 && num >= 10)
-      ret = "0" + num; 
-  
-    else
-      ret = num;
-
-    return ret;
-  }
-
-  const today = new Date();
-  const [years, setYear] = useState(today.getFullYear());
-  const [months, setMonth] = useState(today.getMonth()+1);
-  const [dates, setDate] = useState(today.getDate());
-  const [hours, setHour] = useState(today.getHours());
-  const [minutes, setMin] = useState(today.getMinutes());
-  const [seconds, setSec] = useState(today.getSeconds());
-  const [milliseconds, setmilliSec] = useState(today.getMilliseconds());
-  //let msg = year + "年" + month + "月" + date + "日" + hours + "時" + minutes + "分" + seconds + "秒";
-
-  setInterval(() => {
-    let now = new Date();
-    setYear((nye) => now.getFullYear());
-    setMonth((nmo) => now.getMonth()+1);
-    setDate((nda) => now.getDate());
-    setHour((nho) => now.getHours());
-    setMin((nmi) => now.getMinutes());
-    setSec((nse) => now.getSeconds());
-    setmilliSec((nmse) => now.getMilliseconds());
-  }, 10);
-
   return (
     <div>
       <Head>
@@ -79,7 +35,7 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-end mb-5">
           <div className='grid justify-items-satrt'>
             <img src="https://spotify-recently-played-readme.vercel.app/api?user=31upypeuqy2n3urisvkknr7gh2ra"
               alt="recently spotify"
@@ -94,13 +50,6 @@ export default function Home() {
               className='w-1/2' />
           </div>
         </div>
-        
-        <p 
-        id="RealtimeClockArea" suppressHydrationWarning={true}
-        className="text-right text-xl mt-5"
-        >
-          {years}年{months}月{dates}日{twoDigit(hours)}時{twoDigit(minutes)}分{twoDigit(seconds)}秒{threeDigit(milliseconds)}ミリ秒
-        </p>
 
         <hr/>
         <div className='text-center'>
