@@ -1,7 +1,7 @@
 "use client"
 
 import Head from 'next/head';
-import { useState } from 'react';
+import Link from "next/link";
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -35,8 +35,14 @@ export default function Home() {
           </h1>
         </div>
 
+        <div>
+          <h1 className="text-3xl mt-3 mb-3 text-center">
+            <a href="/profile" className="underline decoration-blue-300">プロフィール</a>
+          </h1>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 items-end mb-5">
-          <div className='grid justify-items-satrt'>
+          <div className='grid justify-items-center lg:justify-items-start'>
             <img src="https://spotify-recently-played-readme.vercel.app/api?user=31upypeuqy2n3urisvkknr7gh2ra"
               alt="recently spotify"
               loading='lazy'
@@ -61,5 +67,5 @@ export default function Home() {
         </p>
       </main>
     </div >    
-    )
-  }
+  )
+}
