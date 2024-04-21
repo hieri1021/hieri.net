@@ -1,7 +1,7 @@
 "use client"
 
 import Head from 'next/head';
-import Link from "next/link";
+import  { useState } from "react";
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -12,6 +12,8 @@ library.add(faTwitter as IconDefinition);
 
 export default function Home() {
 
+  const [mapSquare, setMapSquare] = useState("./avatar_normal.png");
+
   return (
     <div>
       <Head>
@@ -21,6 +23,20 @@ export default function Home() {
 
       <main className="container mx-auto">
         <h1 className="text-5xl mt-3">hieri.net</h1>
+
+        <div className='text-center mt-10'>
+          <img
+          alt="avatar"
+          src={mapSquare}
+          onMouseEnter={() => {
+            setMapSquare("./avatar_smile.png");
+          }}
+        
+          onMouseLeave={() => {
+            setMapSquare("./avatar_normal.png");
+          }}
+          className='inline hover:cursor-grab' />
+        </div>
 
         <div className="text-4xl mt-10 mb-10">
           <h1 className="text-center mb-5">
@@ -60,8 +76,8 @@ export default function Home() {
           </div>
         </div>
 
-        <hr/>
-        <div className='text-center'>
+        <hr />
+        <div className='text-center mb-2 mt-1'>
           <img alt="hieribanner" src="./website_banner.png" className='h-12 inline' />
           <img alt="happybanner" src="./busy_banner.webp" className='h-12 inline' />
         </div>
