@@ -7,12 +7,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+//import PrimaryBtn from "../components/btn"
 library.add(faGithub as IconDefinition);
 library.add(faTwitter as IconDefinition);
 
 export default function Home() {
 
   const [mapSquare, setMapSquare] = useState("./avatar_normal.png");
+
+  const API_KEY:string = (process.env.NEXT_PUBLIC_DEEPL_AUTH_KEY === undefined)? "":process.env.NEXT_PUBLIC_DEEPL_AUTH_KEY;
+  const API_URL = 'https://api-free.deepl.com/v2/translate';
+
+  function output() {
+    const entext = (document.getElementById("entext") as HTMLInputElement)!.value;
+
+    let content = encodeURI('auth_key=' + API_KEY + '&text=' + entext + '&source_lang=JA&target_lang=RU');
+    let url = API_URL + '?' + content;
+
+    fetch(url)
+      .then(function(response) {
+          if (response.ok) {
+              return response.json();
+          } else {
+              throw new Error("Could not reach the API: " + response.statusText);
+          }
+      }).then(function(data) {
+          (document.getElementById("jatext") as HTMLInputElement)!.value = data["translations"][0]["text"];
+      }).catch(function(error) {
+          (document.getElementById("jatext") as HTMLInputElement)!.value = error.message;
+      });
+  };
 
   return (
     <div>
@@ -58,6 +82,14 @@ export default function Home() {
           <h1 className="text-3xl mt-3 mb-3 text-center">
             <a href="/game" className="underline decoration-blue-300">ゲーム</a>
           </h1>
+        </div>
+
+        <div className='text-center mt-10'>
+          <h1 className='text-3xl'>ロシア語翻訳</h1>
+          <textarea id="entext" className='inline'>It was a dark and stormy night...</textarea>
+          <br />
+          <button onClick={() => output()} className='mt-5 mb-5'>ロシア語に翻訳</button><br/>
+          <textarea id="jatext" readOnly className='mb-5'></textarea>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-end mb-5">
