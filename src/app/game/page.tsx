@@ -10,6 +10,13 @@ export default function Game() {
           <a href="https://pjsekai.sega.jp/" target="_blank" rel="noopener noreferrer" className="underline decoration-blue-300">プロセカ</a>はいいぞ
         </h1>
       </div>
+      <br/>
+      <h1 className="text-2xl mt-3">
+        Steamでやったゲーム
+      </h1>
+      <div>
+        <iframe src="https://steam-embeds-v2.vercel.app/widget?id=76561199490148278&num=5" width="350" height="470"></iframe>
+      </div>
     </main>
   );
 }
