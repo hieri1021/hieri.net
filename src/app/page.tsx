@@ -20,7 +20,7 @@ export default function Home() {
   function output() {
     const entext = (document.getElementById("entext") as HTMLInputElement)!.value;
 
-    let content = encodeURI('auth_key=' + API_KEY + '&text=' + entext + '&source_lang=JA&target_lang=RU');
+    let content = encodeURI('auth_key=' + API_KEY + '&text=' + entext + '&target_lang=RU');
     let url = API_URL + '?' + content;
 
     fetch(url)
