@@ -85,7 +85,7 @@ export default function Home() {
 
         <div className='text-center mt-10'>
           <h1 className='text-3xl'>ロシア語翻訳</h1>
-          <textarea id="entext" className='inline'>It was a dark and stormy night...</textarea>
+          <textarea id="entext" className='inline' defaultValue="It was a dark and stormy night..."></textarea>
           <br />
           <button onClick={() => output()} className='mt-5 mb-5'>ロシア語に翻訳</button><br/>
           <textarea id="jatext" readOnly className='mb-5'></textarea>
