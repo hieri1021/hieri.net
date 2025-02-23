@@ -1,0 +1,31 @@
+{
+    "$schema": "https://kusaremkn.github.io/mantela/mantela.schema.json",
+    "version": "0.0.0",
+    "aboutMe": {
+        "identifier": "91c5f34f-c178-4cfe-a488-be6ed00fac3b",
+        "preferredPrefix": "890",
+        "name": "hieri"
+    },
+    "extensions": [
+        {
+            "extension": "890",
+            "name": "Windows",
+            "type": "phone",
+            "identifier": "75RN773M"
+        }
+    ],
+    "providers": [
+        {
+            "identifier": "3be47f94-3185-4198-ac3d-ca5ccb573cc2",
+            "name": "yude",
+            "prefix": "390",
+            "mantela": "https://www.yude.jp.eu.org/.well-known/mantela.json"
+        },
+        {
+            "identifier": "93b2d256-39c1-4053-bda1-c0643dd40690",
+            "name": "MIKANETEL",
+            "prefix": "510",
+            "mantela": "https://unstable.kusaremkn.com/.well-known/mantela.json"
+        }
+    ]
+}
