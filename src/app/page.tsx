@@ -10,6 +10,8 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 library.add(faGithub as IconDefinition);
 library.add(faTwitter as IconDefinition);
 
+export const runtime = "edge";
+
 export default function Home() {
 
   const [mapSquare, setMapSquare] = useState("./avatar_normal.png");
